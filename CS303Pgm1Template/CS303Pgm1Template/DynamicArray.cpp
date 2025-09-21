@@ -5,7 +5,7 @@
 #include "DynamicArray.h"
 #include <iostream>
 #include <stdexcept> // includes header file and basic libaries
-
+#include <iomanip> // Allows the printed array to have 4 spaces between each value
 using namespace std; //Removes the need to use std::
 
 DynamicArray::DynamicArray(int initialCapacity) { //sets size to 0 and allocates memory
@@ -62,8 +62,11 @@ int DynamicArray::findIndex(int value) const { //Returns index of a specificied 
 	return -1;
 }
 void DynamicArray::printList() const { //Prints each element of the array
-	cout << "The neatly printed array: ";
-	for (int i = 0; i < size; ++i)
-		cout << data[i] << " ";
+	cout << "The neatly printed array:\n";
+	for (int i = 0; i < size; ++i) {
+		cout << setw(4) << data[i] << " "; //adds 4 spaces between each printed value for better readability
+		if ((i + 1) % 10 == 0) //Prints newline every 10 elements for better readability
+			cout << endl;
+	}
 	cout << endl;
 }
