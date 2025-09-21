@@ -55,7 +55,7 @@ int getValidNumber() { //Asks user for a valid integer until provided
 void loadFile(DynamicArray& arr, const string& filename, const string& errorFile) {
 	//reads from the file line by line and adds it to the array, writes to error.txt if it can't 
 	ifstream infile(filename);
-	ofstream errorOut(errorFile);
+	ofstream errorOut(errorFile); // Overwrites file each run
 	string line;
 
 	while (getline(infile, line)) {
@@ -156,3 +156,4 @@ int main() { //initializes the dynamic array and loads it with the input file
 		}
 	}
 }
+//have a good day!!! :)
