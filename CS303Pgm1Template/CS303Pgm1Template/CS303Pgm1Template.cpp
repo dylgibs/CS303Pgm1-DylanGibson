@@ -13,7 +13,7 @@
 using namespace std; // Prevents the need to use std::
 
 
-class DynamicArray { //Handles the creation of the dyanmic array 
+class DynamicArray { //Handles the creation of the dynamic array 
 private:
     int* data; //Pointer to dynamic array
     int capacity; //Total capacity of array
@@ -35,7 +35,7 @@ public:
         data = new int[capacity];
     }
     ~DynamicArray() {
-        delete[] data; //Deconstructor for data
+        delete[] data; //Destructor for data
     }
     int getSize() const { //returns current size of array
         return size;
@@ -77,7 +77,6 @@ public:
     }
     
 };
-int main()
-{
-    std::cout << "Dynamic Arrays\n";
+bool isNumber(const string& str) {
+
 }
